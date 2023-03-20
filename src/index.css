@@ -1,0 +1,25 @@
+body {
+  font-family: 'monaco', sans-serif;
+  font-size: 12pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+}
+header {
+  color: red;
+}
+
+
+button {
+  background-color: greenyellow;
+  border-color: transparent;
+  border-radius: 15pt;
+  color: green;
+}
+html {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  width: 100%;
+}
+
+
