@@ -6,18 +6,29 @@ import PropTypes from "prop-types";
 
 function ReusableForm(props){
   const buttonStyle ={
-    backgroundColor: 'white',
-    color: 'pink',
-    fontSize: '18pt',
+    backgroundColor: 'transparent',
+    color: 'black',
+    fontSize: '15pt',
+    fontFamily:"Aretha Bridge",
 
-  };
+  }
+  const styleOfForm = {
+    marginTop: "10pt",
+    width: "100%",
+    color: "red",
+    fontFamily: "Aretha Bridge",
+    fontSize: "12pt",
+    textAlign: "left",
+    marginLeft:"25%",
+    fontSize:"16pt",
 
+  }
 
   
   return (
     <React.Fragment>
       <h2>New Coffee Bean Form</h2>
-      <form onSubmit={props.formSubmissionHandler}>
+      <form style={styleOfForm} onSubmit={props.formSubmissionHandler}>
         <div className='mb-3'>
           <label htmlFor='name' className='form-label'> Name:</label>
           <input type='text' className='form-control' name='name' required={true} />
@@ -48,21 +59,18 @@ function ReusableForm(props){
         <br></br>
 
         <div className='mb-3'> 
-        <label htmlFor='description' className='form-label'>Flavor Profiles: 
-        <textarea required={true} name="description">
-        </textarea>  
-        </label>
+       <label htmlFor='description' className='form-label'> Flavor Profiles:    </label>
+<textarea required={true} name="description" />
         </div>
         <br></br>
 
         <div className='mb-3'>  
           <label htmlFor='quantity' className='form-label'>Quantity: </label>
-          <input type="number" className='form-control' name='quantity'required={true} />
+          <input type="number" className='form-control' name='quantity'required={true} placeHolder="0" />
         </div> 
 
-        <br></br>
-
-        <button style={buttonStyle}  type='submit' className='btn btn-success' >{props.buttonText}</button>       
+      <br></br>
+      <button style={buttonStyle}  type='submit' className='btn btn-success' >{props.buttonText}</button>       
         <br></br>
       </form>
       <br></br>

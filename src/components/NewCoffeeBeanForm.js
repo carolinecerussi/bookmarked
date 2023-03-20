@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
 
 
-function NewCoffeeBeanForm (props) {
+
+  function NewCoffeeBeanForm (props) {
   function handleNewCoffeeBeanFormSubmission (event) {
     event.preventDefault ();
     props.onNewCoffeeBeanCreation ({
@@ -22,16 +23,19 @@ function NewCoffeeBeanForm (props) {
   }
   return (
     <React.Fragment>
-      <ReusableForm
+      <ReusableForm 
         formSubmissionHandler={handleNewCoffeeBeanFormSubmission}
-        buttonText="Add Coffee"
+        buttonText="Submit"
       />
     </React.Fragment>
   );
 }
 
+
 NewCoffeeBeanForm.propTypes = {
   onNewCoffeeBeanCreation: PropTypes.func,
 };
+
+
 
 export default NewCoffeeBeanForm;

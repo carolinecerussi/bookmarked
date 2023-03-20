@@ -1,6 +1,7 @@
 import React from "react";
 import coffeebag from "../components/coffeebag.jpg";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../../src/Navigation/Navbar";
 function Header(){
 
 	const stylishHeader = {
@@ -12,8 +13,13 @@ function Header(){
 		backgroundImage: {coffeebag}
 	}
 	return ( 
-		<h1 style={stylishHeader} >Coffee World
+	<header>
+	<h1 style={stylishHeader}>Coffee Dreams
 </h1>
+<Navbar />
+
+</header>	
+
 	);
 }
 

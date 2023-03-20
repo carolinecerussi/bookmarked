@@ -27,7 +27,7 @@ function CoffeeBeanList(props) {
 			key = {coffeeBean.id}/>
 		))}
 </React.Fragment>
-	);
+	)
 }
 
 CoffeeBeanList.propTypes = {
