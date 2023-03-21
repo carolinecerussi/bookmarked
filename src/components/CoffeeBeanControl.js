@@ -112,13 +112,12 @@ handleSellingCoffeeBean= () => {
 
 		
 render() {
-  const styledButton = {
-    backgroundColor: 'pink',
-    color: 'white',
+  const addButton = {
+    backgroundColor: 'transparent',
     fontSize: '20px',
     padding: '10px',
-    cursor: 'pointer',
-    margin: 'auto'
+	fontFamily: "Andale Mono",
+
 	};
 
 
@@ -161,7 +160,7 @@ onNewCoffeeBeanCreation={this.handleAddingNewCoffeeBeanToList} />;
 		<React.Fragment>
 {currentlyVisibleState}
 <br></br>
-<button style={styledButton} type="button" onClick={this.handleClick}>
+<button style={addButton} type="button" onClick={this.handleClick}>
 	{buttonText}</button>
 	<br></br>
 	</React.Fragment>

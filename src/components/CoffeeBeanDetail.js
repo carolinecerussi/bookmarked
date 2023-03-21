@@ -1,38 +1,51 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import newBag from "../img/newBag.png";
 
 function CoffeeBeanDetail(props) {
 	const{ coffeeBean, onClickingDelete } = props;
+
 	const styledSubmit = {
-		backgroundColor: 'white',
-    color: 'pink',
-    fontSize: '16pt',
-    padding: '10px',
-    cursor: 'pointer',
-    margin: 'auto'
+	fontFamily: 'Andale Mono',
+    fontSize: '15pt',
+	textAlign: 'left',
+	marginLeft: '10%'
 	}
+
+	const orderDetailStyle = {
+		fontFamily: 'Andale Mono',
+		fontSize : '20pt',
+		marginTop: '50pt',
+		textAlign: 'left',
+		width: '60%'
+
+	}
+const imageStyle = {
+	float:'left',
+	marginTop: '25pt'
+}
 	return(
 		
-		<React.Fragment
-		 key={coffeeBean.id}>
-			<h1>{coffeeBean.name} Details: </h1>
-			<br></br>
-			<h2>Origin: {coffeeBean.origin}</h2>
-			<br></br>
-			<h2>Roast: {coffeeBean.roast}</h2>
-			<br></br>
-			<h2>Price: {coffeeBean.price}</h2>
-			<br></br>
-			<h2>Description: {coffeeBean.description }</h2>
-			<br></br>
-			<h2>Quantity: {coffeeBean.quantity}</h2>
-			<button style={styledSubmit} onClick={ props.onClickingEdit } >Edit Coffee Information</button>
-			<br></br>
-			<button style={styledSubmit} onClick={()=> onClickingDelete(coffeeBean.id)}>Delete Coffee Bag</button>
-			<br></br>
-			<button style={styledSubmit} onClick={ props.onClickingSell }>Sell Some Coffee </button>
-			<br></br>
+		<React.Fragment 
+		 key={coffeeBean.id} >
+			<div style={imageStyle}id="orderImage">
+			<img width='75%' src={newBag} />
+			</div>
+			<div id="orderSummary" style={orderDetailStyle}>
+			<h1 >{coffeeBean.name}: </h1>
+			<h2 >ORIGIN: {coffeeBean.origin}</h2>
+			<h2 >ROAST: {coffeeBean.roast}</h2>
+			<h2>COST: {coffeeBean.price}</h2>
+			<h2 >TASTE NOTES: {coffeeBean.description }</h2>
+			<h2 >Quantity: {coffeeBean.quantity}</h2>
+			</div>
+			<div style= {styledSubmit} id="optionButtons">
+			<button onClick={ props.onClickingSell }>Sell A Bag</button>
+			<br />
+			<button  onClick={ props.onClickingEdit } >Edit </button>
+			<br />
+			<button onClick={()=> onClickingDelete(coffeeBean.id)}>Delete</button>
+			</div>
 		</React.Fragment>
 	);
 	}

@@ -1,26 +1,21 @@
 import React from "react";
-import coffeebag from "../components/coffeebag.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "../../src/Navigation/Navbar";
-import people from "../img/people.png";
+// import Navbar from "../../src/Navigation/Navbar";
+import storeFront from "../img/simpleFront.png";
 function Header(){
 
 	const stylishHeader = {
+		marginTop: "40pt",
 		width: '100%',
 		color: "black",
 		fontFamily: "Aretha Bridge",
-		fontSize: "90pt",
-
-		backgroundImage: {coffeebag}
+		fontSize: '60pt'
 	}
 	return ( 
-	<header>
-	<h1 style={stylishHeader}>Coffee Dreams
-</h1>
-<Navbar />
-<img src={people} />
+<header>
+<h1 style={stylishHeader}>Coffee Dreams</h1>
+<img src={storeFront}></img>
 </header>	
-
 	);
 }
 

@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 function CoffeeBeanList(props) {
 	const coffeeBeanListStyles = {
-		color: '#B2A479',
-		backgroundColor: '#B06001',
-		fontFamily: 'verdana',
+		color: 'white',
+		backgroundColor: 'brown',
+		fontFamily: 'Andale Mono',
 		textAlign: 'center',
 		padding: '15px',
 		margin: 'auto',
@@ -15,6 +15,7 @@ function CoffeeBeanList(props) {
 	return (
 <React.Fragment>
 		{props.coffeeBeanList.map(coffeeBean => (
+			<div id="coffeeBeanListContainer" style={coffeeBeanListStyles}>
 			<CoffeeBean 
 			whenCoffeeBeanClicked = {props.onCoffeeBeanSelection}
 			name = {coffeeBean.name}
@@ -25,6 +26,7 @@ function CoffeeBeanList(props) {
 			quantity = {coffeeBean.quantity}
 			id = {coffeeBean.id}
 			key = {coffeeBean.id}/>
+			</div>
 		))}
 </React.Fragment>
 	)

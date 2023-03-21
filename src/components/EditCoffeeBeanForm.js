@@ -22,7 +22,7 @@ function EditCoffeeBeanForm (props) {
 			<React.Fragment>
 			<ReusableForm 
 			formSubmissionHandler= {handleEditCoffeeBeanFormSubmission}
-				buttonText="Update Details" />
+				buttonText="Update" />
 				</React.Fragment>
 		);
 }
