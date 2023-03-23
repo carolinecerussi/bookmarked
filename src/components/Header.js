@@ -1,20 +1,23 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Navbar from "../../src/Navigation/Navbar";
-import storeFront from "../img/simpleFront.png";
+import pinkBook from "../imgBooks/pinkBookIcon.jpg";
 function Header(){
 
 	const stylishHeader = {
 		marginTop: "40pt",
 		width: '100%',
 		color: "black",
-		fontFamily: "Aretha Bridge",
+		fontFamily: "KiTestRings OutliNe",
 		fontSize: '60pt'
 	}
 	return ( 
 <header>
-<h1 style={stylishHeader}>Coffee Dreams</h1>
-<img src={storeFront}></img>
+	<div class="header" style={stylishHeader}>
+<h1 >Book Marked</h1>
+<h2>social book-sharing</h2>
+<img src={pinkBook}></img>
+</div>
 </header>	
 	);
 }

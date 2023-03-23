@@ -4,7 +4,7 @@ import React from "react";
 import NewBookForm from "./NewBookForm";
 import BookList from './BookList';
 import BookDetail from './BookDetail';
-import EditBookForm from './EditBookForm';
+import EditBookForm from './BookFormInfo';
 // import { NonceProvider } from "react-select";
 
 
@@ -116,7 +116,7 @@ render() {
     backgroundColor: 'transparent',
     fontSize: '20px',
     padding: '10px',
-	fontFamily: "Andale Mono",
+	fontFamily: "KiTestRings OutliNe",
 
 	};
 
