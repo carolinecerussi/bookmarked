@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "./Header";
-import CoffeeBeanControl from "./CoffeeBeanControl";
+import BookControl from "./BookControl";
 function App() {
   return (
     <React.Fragment>
     <Header />
-     <CoffeeBeanControl />    
+     <BookControl />    
      <br></br>
      </React.Fragment>
   )

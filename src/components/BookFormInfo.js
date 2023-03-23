@@ -2,34 +2,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 
-function EditCoffeeBeanForm (props) { 
-	const { coffeeBean } = props;
+function EditBookForm (props) { 
+	const { book } = props;
 	
-	function handleEditCoffeeBeanFormSubmission(event) {
+	function handleEditBookFormSubmission(event) {
 		event.preventDefault();
-		props.onEditCoffeeBean({
+		props.onEditBook({
 			name: event.target.name.value, 
 			origin : event.target.origin.value,
 			roast: event.target.origin.value,
 			price: event.target.price.value,
 			description : event.target.description.value,
 			quantity: event.target.quantity.value,
-			id: coffeeBean.id,
+			id: book.id,
 			
 		});
 	};
 	return (
 			<React.Fragment>
 			<ReusableForm 
-			formSubmissionHandler= {handleEditCoffeeBeanFormSubmission}
+			formSubmissionHandler= {handleEditBookFormSubmission}
 				buttonText="Update" />
 				</React.Fragment>
 		);
 }
 
-EditCoffeeBeanForm.propTypes ={
-	coffeeBean: PropTypes.object,
-	onEditCoffeeBean: PropTypes.func
+EditBookForm.propTypes ={
+	book: PropTypes.object,
+	onEditBook: PropTypes.func
 };
 
-export default EditCoffeeBeanForm;
+export default EditBookForm;

@@ -5,10 +5,10 @@ import ReusableForm from './ReusableForm';
 
 
 
-  function NewCoffeeBeanForm (props) {
-  function handleNewCoffeeBeanFormSubmission (event) {
+  function NewBookForm (props) {
+  function handleNewBookFormSubmission (event) {
     event.preventDefault ();
-    props.onNewCoffeeBeanCreation ({
+    props.onNewBookCreation ({
       name: event.target.name.value,
       origin: event.target.origin.value,
       price: event.target.price.value,
@@ -24,7 +24,7 @@ import ReusableForm from './ReusableForm';
   return (
     <React.Fragment>
       <ReusableForm 
-        formSubmissionHandler={handleNewCoffeeBeanFormSubmission}
+        formSubmissionHandler={handleNewBookFormSubmission}
         buttonText="Submit"
       />
     </React.Fragment>
@@ -32,10 +32,10 @@ import ReusableForm from './ReusableForm';
 }
 
 
-NewCoffeeBeanForm.propTypes = {
-  onNewCoffeeBeanCreation: PropTypes.func,
+NewBookForm.propTypes = {
+  onNewBookCreation: PropTypes.func,
 };
 
 
 
-export default NewCoffeeBeanForm;
+export default NewBookForm;
