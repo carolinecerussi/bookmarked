@@ -78,10 +78,11 @@ function ReusableForm(props){
          </div>
          <br></br>
 
-           <div className='mb-3'>  
-          <label htmlFor='price' className='form-label'>Price:  </label>
-          <input style={inputStyle}  prefix='Read or Not' name="price" type="number" data-number-to-fixed="2" data-number-stepfactor="100" placeholder="$" />
-        </div> 
+         <div className='mb-3'>
+          <label htmlFor='status' className='form-label'>Status:</label>
+          <input style={inputStyle} type='radio' className='form-control' name='status' value='read'  /> READ
+          <input style={inputStyle} type='radio' className='form-control' name='status' value="unread"  /> UNREAD
+        </div>
         <br></br>
 
         <div className='mb-3'> 
@@ -90,8 +91,7 @@ function ReusableForm(props){
         </div>
         <br></br>
 
-        <div className='mb-3'>  
-        <label htmlFor='stars' className='form-label'>Rating: </label>
+        <div className='mb-3'> Rating: 
         <StarRating />
         </div> 
 

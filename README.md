@@ -41,3 +41,8 @@ WIP- still implementing some functionality
 ### License 
 
 copyright (c) 3-22-2023 Caroline Cerussi
+
+
+### Research and Sources: 
+
+## https://dev.to/michaelburrows/create-a-custom-react-star-rating-component-5o6 

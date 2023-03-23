@@ -16,7 +16,7 @@ class BookControl extends React.Component {
 			mainBookList: [],
 			selectedBook: null,
 			editing: false,
-			stars: 0// form for editing ticket
+			stars: undefined // form for editing ticket
 		};
 		this.handleShowForm = this.handleShowForm.bind(this);
 	}

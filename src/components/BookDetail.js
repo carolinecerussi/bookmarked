@@ -29,7 +29,7 @@ const imageStyle = {
 		<React.Fragment 
 		 key={book.id} >
 			<div style={imageStyle}id="bookImage">
-			<img width='75%' src={bookIcon} />
+			<img width='75%' src={bookIcon} alt="book icon" />
 			</div>
 			<div id="orderSummary" style={bookDetailStyle}>
 			<h1 >{book.name}: </h1>
