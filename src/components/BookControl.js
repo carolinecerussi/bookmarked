@@ -16,7 +16,7 @@ class BookControl extends React.Component {
 			mainBookList: [],
 			selectedBook: null,
 			editing: false,
-			quantity: 0// form for editing ticket
+			stars: 0// form for editing ticket
 		};
 		this.handleShowForm = this.handleShowForm.bind(this);
 	}
@@ -33,7 +33,7 @@ class BookControl extends React.Component {
 			});
 		 }
 	}
-		//Create// add new coffee sack to list
+		//Create// add new book  to list
 		handleAddingNewBookToList = (newBook) => {
 			const newMainBookList = this.state.mainBookList.concat(newBook);
 			this.setState({
@@ -63,14 +63,14 @@ handleDeletingBook = (id) => {
 
 
 handleSellingBook= () => {
-	console.log(this.state.selectedBook.quantity);
+	console.log(this.state.selectedBook.stars);
 		const booksSold = this.state.selectedBook;
-		if ( this.state.selectedBook.quantity !== 0) {
+		if ( this.state.selectedBook.stars !== 0) {
 			const quantityToSell = { 
-				quantity: (booksSold.quantity -=1)
+				stars: (booksSold.stars -=1)
 			};
 			this.handleChangingSelectedBook(quantityToSell.id);
-		console.log(this.state.selectedBook.quantity);
+		console.log(this.state.selectedBook.stars);
 		} else {
 			this.handleChangingSelectedBook(this.state.selectedBook.id);
 		}
@@ -114,8 +114,8 @@ handleSellingBook= () => {
 render() {
   const addButton = {
     backgroundColor: 'transparent',
-    fontSize: '20px',
-    padding: '10px',
+    fontSize: '20pt',
+    padding: '10pt',
 	fontFamily: "KiTestRings OutliNe",
 
 	};
@@ -129,7 +129,7 @@ render() {
   if (this.state.editing){
 		currentlyVisibleState = 
 		<EditBookForm book={this.state.selectedBook} onEditBook = {this.handleEditingBookList} />
-    buttonText = "Return to List";
+    buttonText = "<- ✒ Library";
   }
 	else if (this.state.selectedBook !=null)  {
 		currentlyVisibleState = 
@@ -153,9 +153,10 @@ onNewBookCreation={this.handleAddingNewBookToList} />;
 		<BookList
 		bookList={this.state.mainBookList}
 		onBookSelection = {this.handleChangingSelectedBook} />
-		buttonText= "Add New Coffee"
+		buttonText= "Add Book"
 	}
 	
+
 	return(
 		<React.Fragment>
 {currentlyVisibleState}

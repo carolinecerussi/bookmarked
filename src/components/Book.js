@@ -16,11 +16,11 @@ function Book (props) {
 
 Book.propTypes = {
   name: PropTypes.string.isRequired,
-  origin: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   id: PropTypes.string,
   price: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  quantity: PropTypes.string.isRequired,
+  stars: PropTypes.string.isRequired,
   whenBookClicked: PropTypes.func,
 };
 

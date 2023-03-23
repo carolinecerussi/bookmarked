@@ -9,11 +9,11 @@ function EditBookForm (props) {
 		event.preventDefault();
 		props.onEditBook({
 			name: event.target.name.value, 
-			origin : event.target.origin.value,
-			roast: event.target.origin.value,
+			author : event.target.author.value,
+			genre: event.target.author.value,
 			price: event.target.price.value,
 			description : event.target.description.value,
-			quantity: event.target.quantity.value,
+			stars: event.target.stars.value,
 			id: book.id,
 			
 		});

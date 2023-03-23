@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 function BookList(props) {
 	const bookListStyles = {
 		color: 'white',
-		backgroundColor: 'brown',
-		fontFamily: 'Andale Mono',
+		backgroundColor: 'light pink',
+		fontFamily: 'KiTestRings',
 		textAlign: 'center',
 		padding: '15px',
 		margin: 'auto',
@@ -19,11 +19,11 @@ function BookList(props) {
 			<Book 
 			whenBookClicked = {props.onBookSelection}
 			name = {book.name}
-			origin = {book.origin}
-			roast = {book.roast}
+			author = {book.author}
+			genre = {book.genre}
 			price = {book.price}
 			description = {book.description}
-			quantity = {book.quantity}
+			stars = {book.stars}
 			id = {book.id}
 			key = {book.id}/>
 			</div>

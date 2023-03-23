@@ -10,22 +10,22 @@ import ReusableForm from './ReusableForm';
     event.preventDefault ();
     props.onNewBookCreation ({
       name: event.target.name.value,
-      origin: event.target.origin.value,
+      author: event.target.author.value,
+      genre: event.target.genre.value,
       price: event.target.price.value,
-      roast: event.target.roast.value,
       description: event.target.description.value,
       id: v4 (),
-      quantity: event.target.quantity.value,
+      stars: event.target.stars.value,
       // weight: parseInt(event.target.weight.value),
-      //  quantity: parseInt(event.target.quantity.value),
-      //  totalPounds: parseInt(event.target.quantity.value) * 130,
+      //  stars: parseInt(event.target.stars.value),
+      //  totalPounds: parseInt(event.target.stars.value) * 130,
     });
   }
   return (
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewBookFormSubmission}
-        buttonText="Submit"
+        buttonText="Add Book"
       />
     </React.Fragment>
   );
