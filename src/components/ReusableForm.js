@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // import { NonceProvider } from "react-select";
 // import CurrencyInput  from 'react-currency-input-field';
-
+import StarRating from "./starRate";
 
 function ReusableForm(props){
   const buttonStyle ={
@@ -38,7 +38,7 @@ function ReusableForm(props){
       <br></br>
         <div className='mb-3'>
           <label htmlFor='title' className='form-label'> Title:</label>
-          <input style={inputStyle} type='text' className='form-control' name='name' required={true} />
+          <input style={inputStyle} type='text' className='form-control' name='title' required={true} />
           <br></br>
         </div>
         <div className='mb-3'>
@@ -80,19 +80,19 @@ function ReusableForm(props){
 
            <div className='mb-3'>  
           <label htmlFor='price' className='form-label'>Price:  </label>
-          <input style={inputStyle}  prefix='Read or Not' name="price" type="number" data-number-to-fixed="2" data-number-stepfactor="100" placeholder="$" allowDecimals decimalsLimit="2" />
+          <input style={inputStyle}  prefix='Read or Not' name="price" type="number" data-number-to-fixed="2" data-number-stepfactor="100" placeholder="$" />
         </div> 
         <br></br>
 
         <div className='mb-3'> 
-       <label htmlFor='description' className='form-label'> Review: </label>
-<textarea style={inputStyle}  required={true} name="description" />
+       <label htmlFor='review' className='form-label'> Review: </label>
+<textarea style={inputStyle}  required={true} name="review" />
         </div>
         <br></br>
 
         <div className='mb-3'>  
         <label htmlFor='stars' className='form-label'>Rating: </label>
-        <input  style={inputStyle} type="number" className='form-control' name='stars'required={true} placeHolder="0" />
+        <StarRating />
         </div> 
 
       <br></br>

@@ -13,7 +13,7 @@ function Header(){
 	}
 	return ( 
 <header>
-	<div class="header" style={stylishHeader}>
+	<div className="header" style={stylishHeader}>
 <h1 >Book Marked</h1>
 <h2>social book-sharing</h2>
 <img src={pinkBook}></img>

@@ -4,21 +4,17 @@ import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
 
 
-
   function NewBookForm (props) {
   function handleNewBookFormSubmission (event) {
     event.preventDefault ();
     props.onNewBookCreation ({
-      name: event.target.name.value,
+      title: event.target.title.value,
       author: event.target.author.value,
       genre: event.target.genre.value,
       price: event.target.price.value,
-      description: event.target.description.value,
-      id: v4 (),
+      review: event.target.review.value,
       stars: event.target.stars.value,
-      // weight: parseInt(event.target.weight.value),
-      //  stars: parseInt(event.target.stars.value),
-      //  totalPounds: parseInt(event.target.stars.value) * 130,
+      id: v4 (),
     });
   }
   return (
