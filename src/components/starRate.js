@@ -1,7 +1,7 @@
 import StarRating from "./StarRating";
 import "./App.css";
 
-const App = () => {
+const StarApp = () => {
   return (
     <div className="App">
       <StarRating />
@@ -9,4 +9,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default StarApp;

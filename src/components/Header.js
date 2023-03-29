@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Navbar from "../../src/Navigation/Navbar";
-import pinkBook from "../imgBooks/pinkBookIcon.png";
+import otherbook from "../imgBooks/bookOpen.png";
 function Header(){
 
 	const stylishHeader = {
@@ -15,7 +15,7 @@ function Header(){
 Book Marked
 <h1>social book-sharing</h1>
 </div>
-<img src={pinkBook} alt="pink book"></img>
+<img src={otherbook} alt=" book" width="50%"></img>
 </header>	
 	);
 }

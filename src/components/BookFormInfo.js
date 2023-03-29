@@ -13,7 +13,7 @@ function EditBookForm (props) {
 			genre: event.target.author.value,
 			price: event.target.price.value,
 			description : event.target.description.value,
-			stars: event.target.stars.value,
+			star: event.target.star.value,
 			id: book.id,
 			
 		});

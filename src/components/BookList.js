@@ -18,12 +18,11 @@ function BookList(props) {
 			<div id="bookListContainer" style={bookListStyles}>
 			<Book 
 			whenBookClicked = {props.onBookSelection}
-			name = {book.name}
+			title = {book.title}
 			author = {book.author}
 			genre = {book.genre}
-			price = {book.price}
-			description = {book.description}
-			stars = {book.stars}
+			review = {book.review}
+			star = {book.star}
 			id = {book.id}
 			key = {book.id}/>
 			</div>

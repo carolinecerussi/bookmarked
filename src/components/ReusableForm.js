@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 // import { NonceProvider } from "react-select";
 // import CurrencyInput  from 'react-currency-input-field';
 import StarRating from "./starRate";
+import StarApp from "./starRate";
 
-function ReusableForm(props){
-  const buttonStyle ={
+function ReusableForm(props) {
+  const buttonStyle = {
     backgroundColor: 'transparent',
     color: 'pink',
     fontSize: '20pt',
-    fontFamily:"KiTestRings",
+    fontFamily: "KiTestRings",
     textAlign: 'center',
     borderColor: 'transparent',
   }
@@ -30,12 +31,12 @@ function ReusableForm(props){
     borderRadius: '5pt',
   }
 
-  
+
   return (
     <React.Fragment>
       <form style={styleOfForm} onSubmit={props.formSubmissionHandler}>
-      <h1>Book Info</h1>
-      <br></br>
+        <h1>Book Info</h1>
+        <br></br>
         <div className='mb-3'>
           <label htmlFor='title' className='form-label'> Title:</label>
           <input style={inputStyle} type='text' className='form-control' name='title' required={true} />
@@ -46,9 +47,9 @@ function ReusableForm(props){
           <input style={inputStyle} type='string' className='form-control' name='author' required={true} />
         </div>
         <br></br>
-        <div className='mb-3'> 
-        <label htmlFor='genre' className='form-label'>Genre</label>
-          <select style={inputStyle}  name="genre"  required={true} id='dropdown'>
+        <div className='mb-3'>
+          <label htmlFor='genre' className='form-label'>Genre</label>
+          <select style={inputStyle} name="genre" required={true} id='dropdown'>
             <option value='AdventureFiction'>Adventure Fiction</option>
             <option value='ArtsMedia'>Arts & Media</option>
             <option value='BiographiesMemoirs'>Biographies & Memoirs</option>
@@ -74,29 +75,27 @@ function ReusableForm(props){
             <option value='Sports'>Sports</option>
             <option value='YoungAdult'> Young Adult</option>
 
-          </select> 
-         </div>
-         <br></br>
-
+          </select>
+        </div>
+        <br></br>
+        {/* 
          <div className='mb-3'>
           <label htmlFor='status' className='form-label'>Status:</label>
           <input style={inputStyle} type='radio' className='form-control' name='status' value='read'  /> READ
           <input style={inputStyle} type='radio' className='form-control' name='status' value="unread"  /> UNREAD
         </div>
-        <br></br>
+        <br></br> */}
 
-        <div className='mb-3'> 
-       <label htmlFor='review' className='form-label'> Review: </label>
-<textarea style={inputStyle}  required={true} name="review" />
+        <div className='mb-3'>
+          <label htmlFor='review' className='form-label'> Review: </label>
+          <textarea style={inputStyle} required={true} name="review" />
         </div>
         <br></br>
-
-        <div className='mb-3'> Rating: 
-        <StarRating />
-        </div> 
-
-      <br></br>
-      <button style={buttonStyle}  type='submit' className='btn btn-success' >{props.buttonText}</button>       
+        <div className='mb-3'> Rating:
+          <StarApp />
+        </div>
+        <br></br>
+        <button style={buttonStyle} type='submit' className='btn btn-success' >{props.buttonText}</button>
         <br></br>
       </form>
       <br></br>

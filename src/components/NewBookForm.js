@@ -11,9 +11,8 @@ import ReusableForm from './ReusableForm';
       title: event.target.title.value,
       author: event.target.author.value,
       genre: event.target.genre.value,
-      status: event.target.status.value.selected,
       review: event.target.review.value,
-      rating: event.target.rating.value,
+      star: event.target.star,
       id: v4 (),
     });
   }

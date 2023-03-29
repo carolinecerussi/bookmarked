@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import newBag from "../img/newBag.png";
 
 function Book (props) {
   return (
     <React.Fragment>
       <div onClick={() => props.whenBookClicked (props.id)}>
-        <img  width="20%" src={newBag} alt="bag of coffee" />
-          <h1>{props.name}</h1>
+          <h1>{props.title}</h1>
           <h3>Stock status WIP</h3>
       </div>
     </React.Fragment>
@@ -15,12 +13,11 @@ function Book (props) {
 }
 
 Book.propTypes = {
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string,
-  price: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  stars: PropTypes.string.isRequired,
+  review: PropTypes.string.isRequired,
+  star: PropTypes.string.isRequired,
   whenBookClicked: PropTypes.func,
 };
 
