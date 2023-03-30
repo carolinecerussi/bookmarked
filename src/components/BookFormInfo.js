@@ -8,11 +8,10 @@ function EditBookForm (props) {
 	function handleEditBookFormSubmission(event) {
 		event.preventDefault();
 		props.onEditBook({
-			name: event.target.name.value, 
+			title: event.target.title.value, 
 			author : event.target.author.value,
 			genre: event.target.author.value,
-			price: event.target.price.value,
-			description : event.target.description.value,
+			review : event.target.review.value,
 			star: event.target.star.value,
 			id: book.id,
 			

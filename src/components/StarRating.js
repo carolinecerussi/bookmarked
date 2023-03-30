@@ -3,11 +3,11 @@ import React, { useState } from "react";
 const StarRating = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const star = {rating};
   return (
     <div className="star-rating">
       {[...Array(5)].map((star, index) => {
         index += 1;
+       star =  rating;
         return (
           <button
             type="button"
@@ -15,7 +15,7 @@ const StarRating = () => {
             className={index <= (hover || rating) ? "on" : "off"}
             onClick={() => setRating(index)}
             onMouseEnter={() => setHover(index)}
-            onMouseLeave={() => setHover(star)}
+            onMouseLeave={() => setHover(rating)}
           >
             <span className="star">&#9733;</span>
           </button>
