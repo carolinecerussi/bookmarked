@@ -6,20 +6,22 @@ function Header(){
 
 	const stylishHeader = {
 		color: "black",
+		fontSize: '150pt',
 		fontFamily: "KiTestRings OutliNe",
-		fontSize:'90pt',
-		backgroundColor: 'transparent'
+		backgroundColor: 'transparent',
+
 	}
+
 	return ( 
-<header>
-	<div className="header" style={stylishHeader}>
+		<header>
+<div className="header" style={stylishHeader}>
 Book Marked
-<h1>social book-sharing</h1>
-<img src={otherbook} alt=" book" width="50%"></img>
+{/* <h1>Book Sharing</h1> */}
 </div>
-</header>	
+<img src={otherbook} alt=" book" width="50%"></img>
+</header>
 	);
 
 }
 
-	export default Header;
+export default Header;

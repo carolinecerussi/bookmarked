@@ -7,10 +7,8 @@ function BookList(props) {
 		color: 'white',
 		backgroundColor: 'light pink',
 		fontFamily: 'KiTestRings',
-		textAlign: 'center',
-		padding: '15px',
-		margin: 'auto',
-		marginRight: '800'		
+		textAlign: 'left',
+		padding: '5%',
 	}
 	return (
 <React.Fragment>

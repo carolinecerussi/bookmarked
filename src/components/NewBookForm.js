@@ -12,7 +12,7 @@ import ReusableForm from './ReusableForm';
       author: event.target.author.value,
       genre: event.target.genre.value,
       review: event.target.review.value,
-      star: event.target.index,
+      star: event.target.star,
       id: v4 (),
     });
   }

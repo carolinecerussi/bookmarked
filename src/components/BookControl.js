@@ -113,8 +113,10 @@ handleSellingBook= () => {
 		
 render() {
   const addButton = {
-    backgroundColor: 'transparent',
-    fontSize: '20pt',
+    backgroundColor: 'white',
+	borderRadius: '5pt',
+	color: 'black',
+    fontSize: '40pt',
     padding: '10pt',
 	fontFamily: "KiTestRings OutliNe",
 
@@ -153,12 +155,13 @@ onNewBookCreation={this.handleAddingNewBookToList} />;
 		<BookList
 		bookList={this.state.mainBookList}
 		onBookSelection = {this.handleChangingSelectedBook} />
-		buttonText= "Add Book"
+		buttonText= "Add New Book"
 	}
 	
 
 	return(
 		<React.Fragment>
+			
 {currentlyVisibleState}
 <br></br>
 <button style={addButton} type="button" onClick={this.handleClick}>
