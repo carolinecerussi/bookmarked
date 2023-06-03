@@ -3,7 +3,6 @@ import {v4} from 'uuid';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
 
-
   function NewBookForm (props) {
   function handleNewBookFormSubmission (event) {
     event.preventDefault ();

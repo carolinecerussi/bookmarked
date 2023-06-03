@@ -19,23 +19,22 @@ This application is a library creator that allows users to input a book that the
 
 
 ## Diagram 
-![BookControl Graph](Graph.jpg)
 
 
 ## Setup & Installation Requirements
 
-*  Clone this repository from https://github.com/carolinecerussi/Book-Marked to your desktop
+*  Clone this repository from https://github.com/carolinecerussi/bookmarked.git to your desktop
 
-*  Navigate to the top level of the dir* In your terminal console: $cd to bookMarked directory
+*  Navigate to the top level of the dir* In your terminal console: $cd to bookMarked-bookClub directory
 
-*  $npm install
+*  $npm install in terminal
 
-*  $npm run start to open in web browser http://localhost:3000
+*  $npm run start in terminal to open in web browser http://localhost:3000
 
 
 ## Known Bugs
 
-WIP- still implementing some functionality 
+WIP- still implementing some functionality and styling
 
 
 ### License 
