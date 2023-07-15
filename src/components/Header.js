@@ -8,17 +8,17 @@ function Header(){
 		color: "black",
 		fontSize: '150pt',
 		fontFamily: "KiTestRings OutliNe",
-		backgroundColor: 'transparent',
-
+		width:'100%',
+		display:'inlineBLock',
+		justifyContent: 'center',
+		lineHeight: '125pt',
+		marginTop:'5%',
+		backgroundColor:'transparent'
 	}
 
 	return ( 
-		<header>
-<div className="header" style={stylishHeader}>
+		<header  style={stylishHeader}><img src={otherbook} alt=" book" width="20%" />
 Book Marked
-{/* <h1>Book Sharing</h1> */}
-</div>
-<img src={otherbook} alt=" book" width="50%"></img>
 </header>
 	);
 

@@ -1,0 +1,18 @@
+
+
+  button {
+    background-color: transparent;
+    font-size: 30pt;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: #f85a11;
+  }
+  .off {
+    color: #ccc;
+  }
+
+
+  

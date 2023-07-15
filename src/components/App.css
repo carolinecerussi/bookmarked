@@ -1,34 +1,5 @@
+body {
+  background-color:'transparent';
+}
 
 
-  
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  button {
-    background-color: transparent;
-    font-size: 30pt;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  .on {
-    color: #f85a11;
-  }
-  .off {
-    color: #ccc;
-  }
-
-
-  html {
-    background-image: url(../imgBooks/booktower1.png);
-    background-size: cover;
-  }
-
-  

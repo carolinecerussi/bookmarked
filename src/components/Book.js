@@ -8,6 +8,7 @@ function Book (props) {
         <img src={bookIcon} alt="book icon"></img>
           <h1>{props.title}</h1>
           <h2>{props.author}</h2>
+          <h2>{props.star}</h2>
       </div>
     </React.Fragment>
   );

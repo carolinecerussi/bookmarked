@@ -7,18 +7,24 @@ function BookDetail(props) {
 
 	const styledSubmit = {
 	fontFamily: 'KiTestRings',
-    fontSize: '30pt',
+    fontSize: '25pt',
 	color: 'red',
-	textAlign: '',
+	
 	}
 
 	const bookDetailStyle = {
 		fontFamily: 'KiTestRings',
-		fontSize: '30pt',
+		fontSize: '25pt',
 		textAlign: 'left',
-		backgroundColor: "white",
 		paddingTop: '2%',
-		paddingBottom: '2%'
+		paddingBottom: '2%',
+		justifyContent:'center',
+		display:'block',
+		margin:'5%',
+		backgroundColor:'white',
+		padding:'3%',
+		borderRadius:'5pt',
+
 
 	}
 
@@ -27,6 +33,7 @@ function BookDetail(props) {
 		<React.Fragment 
 		 key={book.id} >
 			<div class="bookDetail"id="bookSummary" style={bookDetailStyle}>
+			
 			<h1>{book.title} </h1>
 			<h1 >{book.star}</h1>
 			<h2 >Author: {book.author}</h2>

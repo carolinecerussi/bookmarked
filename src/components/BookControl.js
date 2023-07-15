@@ -112,14 +112,17 @@ handleSellingBook= () => {
 
 		
 render() {
-  const addButton = {
-    backgroundColor: 'white',
-	borderRadius: '5pt',
-	color: 'black',
-    fontSize: '40pt',
-    padding: '10pt',
-	fontFamily: "KiTestRings OutliNe",
 
+  const addButton = {
+    backgroundColor: 'transparent',
+	color: 'black',
+    fontSize: '25pt',
+    padding: '5pt',
+	fontFamily: "KiTestRings OutliNe",
+	marginTop:'3%',
+	marginBottom:'3%',
+	width:'100%',
+	display:'block',
 	};
 
 
@@ -142,13 +145,13 @@ render() {
 		 onClickingSell={this.handleSellingBook} 
 		 />
 
-	buttonText= "Return to List"
+	buttonText= "Return to Library"
 
 	} else if (this.state.formVisibleOnPage) {
 		currentlyVisibleState = 
     <NewBookForm
 onNewBookCreation={this.handleAddingNewBookToList} />;    
-    buttonText = "Return to List";
+    buttonText = "Return to Library";
 	}
 	else {
 		currentlyVisibleState = 
@@ -161,7 +164,6 @@ onNewBookCreation={this.handleAddingNewBookToList} />;
 
 	return(
 		<React.Fragment>
-			
 {currentlyVisibleState}
 <br></br>
 <button style={addButton} type="button" onClick={this.handleClick}>

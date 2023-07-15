@@ -7,27 +7,39 @@ import StarApp from "./starRate";
 function ReusableForm(props) {
   const buttonStyle = {
     backgroundColor: 'transparent',
-    color: 'orange',
-    fontSize: '40pt',
+    color: 'red',
+    fontSize: '25pt',
     fontFamily: "KiTestRings",
     textAlign: 'center',
     borderColor: 'transparent',
   }
 
-  const inputStyle = {
+  const inputContainerStyle = {
     fontSize:'20pt',
     fontFamily: "KiTestRings",
-    borderRadius: '10pt',
+    borderRadius: '5pt',
     backgroundColor: 'white',
-    textAlign: 'center',
-    margin: '10%',
+    padding:'2%',
+    textAlign: 'left',
+    width:'90%',
+    marginTop:'3%',
+    marginBottom:'5%',
+    marginLeft: '5%',
   }
 
+const inputStyle = {
+  fontSize:'20pt',
+  width:'50%',
+  height:'50pt',
+  marginBottom:'2%',
 
+}
   return (
-    <React.Fragment style={inputStyle}>
-      <form  style={inputStyle} onSubmit={props.formSubmissionHandler}>
+    <React.Fragment>
+      <div style = {inputContainerStyle}>
+      <form onSubmit={props.formSubmissionHandler}>
         <h1>Book Info</h1>
+        <br />
         <div  className='mb-3'>
           <label htmlFor='title' className='form-label'> Title:</label>
           <input style={inputStyle} type='text' className='form-control' name='title' required={true} />
@@ -37,7 +49,7 @@ function ReusableForm(props) {
           <input style={inputStyle} type='string' className='form-control' name='author' required={true} />
         </div>
         <div className='mb-3'>
-          <label  htmlFor='genre' className='form-label'>Genre:</label>
+          <label  htmlFor='genre' className='form-label'>Genre:</label> <br />
           <select style={inputStyle} name="genre" required={true} id='dropdown'>
             <option value='AdventureFiction'>Adventure Fiction</option>
             <option value='ArtsMedia'>Arts & Media</option>
@@ -75,15 +87,17 @@ function ReusableForm(props) {
         <br></br> */}
 
         <div className='mb-3'>
-          <label htmlFor='review' className='form-label'> Review: </label>
+          <label htmlFor='review' className='form-label'> Review: </label><br />
           <textarea style={inputStyle} required={true} name="review" />
         </div>
-        <br></br>
         <div className='mb-3'> Rating:
-          <StarApp />
+  <StarApp style = {inputStyle}
+ />
         </div>
+
         <button style={buttonStyle} type='submit' className='btn btn-success' >{props.buttonText}</button>
       </form>
+      </div>
     </React.Fragment>
   );
 }

@@ -1,15 +1,16 @@
 import React from "react";
 import Book from "./Book";
 import PropTypes from "prop-types";
-
+import StarRating from "./StarRating";
 function BookList(props) {
 	const bookListStyles = {
-		color: 'white',
-		backgroundColor: 'light pink',
+		color: 'black',
 		fontFamily: 'KiTestRings',
 		textAlign: 'left',
-		padding: '5%',
-	}
+		marginLeft: '5%',
+		display:'grid',
+		marginTop:'5%',
+float:'left'	}
 	return (
 <React.Fragment>
 		{props.bookList.map(book => (
