@@ -6,15 +6,28 @@ function BookList(props) {
 	const bookListStyles = {
 		color: 'black',
 		fontFamily: 'KiTestRings',
-		textAlign: 'left',
-		marginLeft: '5%',
-		display:'grid',
+		textAlign: 'center',
 		marginTop:'5%',
+		width:'100vw',
 float:'left'	}
+
+const outside = {
+	backgroundColor:'white',
+	paddingTop:'2%',
+			display:'grid',
+width:'100%',
+
+
+
+}
+
 	return (
 <React.Fragment>
 		{props.bookList.map(book => (
-			<div id="bookListContainer" style={bookListStyles}>
+	
+			<div id="bookListContainer" style = {outside}
+>
+	<div id="book" style = {bookListStyles} >
 			<Book 
 			whenBookClicked = {props.onBookSelection}
 			title = {book.title}
@@ -23,8 +36,9 @@ float:'left'	}
 			review = {book.review}
 			star = {book.star}
 			id = {book.id}
-			key = {book.id}/>
+			key = {book.id} />
 			</div>
+</div>
 		))}
 </React.Fragment>
 	)

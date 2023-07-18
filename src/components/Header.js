@@ -12,8 +12,9 @@ function Header(){
 		display:'inlineBLock',
 		justifyContent: 'center',
 		lineHeight: '125pt',
-		marginTop:'5%',
-		backgroundColor:'transparent'
+		backgroundColor:'white',
+		padding:'5%',
+		
 	}
 
 	return ( 
